@@ -68,7 +68,7 @@ const Navbar = () => {
                 key={key}
                 href={item.href}
                 className='font-medium text-foreground/80 hover:text-violet-500 transition-colors duration-300'
-                onClick={() => setIsMenuOpen(true)}
+                onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </a>
