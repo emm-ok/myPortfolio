@@ -1,33 +1,33 @@
-import { ArrowRight, ExternalLinkIcon, GitBranchIcon } from 'lucide-react'
+import { ArrowRight, ExternalLinkIcon, GitBranchIcon, Github } from 'lucide-react'
 import React from 'react'
 
 const projects = [
     {
         id: 1,
-        title: 'CSHub Ecommerce Page',
-        description: 'An ecommerce store that allows you to purchase. Built with React and Tailwind',
+        title: 'CasualsHub',
+        description: 'Casualshub is a modern e-commerce platform designed to provide customers with a seamless shopping experience for casual apparel, accessories, and lifestyle products. The website combines intuitive design, responsive functionality, and a visually appealing interface to ensure effortless navigation and a smooth purchasing journey across devices.',
         image: '/projects/project1.png',
         tags: ['React', 'Tailwind'],
-        demoUrl: '#',
-        githubUrl: '#'
+        demoUrl: 'https://casuals-hub-landing-page.vercel.app/',
+        githubUrl: 'https://github.com/emm-ok/CasualsHub_Landing_Page'
     },
     {
         id: 2,
-        title: 'Yummy Food App',
-        description: 'An App Built with React and Tailwind, that provides fast food delivery by ordering with ease',
+        title: 'Verto',
+        description: 'LaunchBoard is a modern web application designed to serve as a central hub for startups to showcase their products, services, and innovative ideas. The platform empowers entrepreneurs to create profiles, share updates, and connect with potential investors, collaborators, and customers, fostering a dynamic ecosystem for early-stage ventures.',
         image: '/projects/project2.png',
-        tags: ['React', 'Tailwind'],
-        demoUrl: '#',
-        githubUrl: '#'
+        tags: ['NextJs', 'TypeScript', 'Tailwind', 'Sanity CMS', 'OAuth', ],
+        demoUrl: 'https://startup-web-app-beta.vercel.app/',
+        githubUrl: 'https://github.com/emm-ok/Startup-Web-App'
     },
     {
         id: 3,
-        title: 'Clothing Store',
-        description: 'An App Built with HTML, CSS and JavaScript, that allows users to purchase clothing online with ease.',
+        title: 'Casuals Hub',
+        description: 'C is a modern e-commerce web application designed to provide customers with a seamless and engaging online shopping experience for clothing and fashion accessories. The platform combines clean, intuitive design with robust functionality to help users easily browse, select, and purchase their favorite apparel.',
         image: '/projects/project3.png',
         tags: ['HTML', 'CSS', 'JavaScript'],
-        demoUrl: '#',
-        githubUrl: '#'
+        demoUrl: 'https://clothing-store-web-smoky.vercel.app/',
+        githubUrl: 'https://github.com/emm-ok/ClothingStoreWeb'
     },
 
 ]
@@ -39,7 +39,7 @@ const ProjectsSection = () => {
                 <h2 className='text-3xl md:text-4xl font-bold mb-4 text-center'>
                     Featured <span className='text-primary'> Projects </span>
                 </h2>
-                <p className='text-center text-muted-foreground max-w-2xl mx-auto mb-4'>
+                <p className='text-center font-medium text-muted-foreground max-w-2xl mx-auto mb-4'>
                     Here are some of my recent project.
                     Each project was carefully crafted with attention to detail,
                     performance, and user experience
@@ -47,8 +47,8 @@ const ProjectsSection = () => {
 
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                     {projects.map((project, key) => (
-                        <div key={key} className='group bg-card p-4 border border-gray-300 rounded-lg overflow-hidden shadow-xs card-hover'>
-                            <div className='h-48 overflow-hidden'>
+                        <div key={key} className='group  p-4 shadow-md border border-gray-300/10 rounded-lg overflow-hidden card-hover'>
+                            <div className='h-48 overflow-hidden border border-gray-500/50 rounded-md'>
                                 <img
                                     src={project.image}
                                     alt="project# image"
@@ -57,9 +57,9 @@ const ProjectsSection = () => {
                             </div>
 
                             <div className='p-6'>
-                                <div className='flex flex-wrap gap-2 mb-4'>
+                                <div className='flex flex-wrap gap-2'>
                                     {project.tags.map((tag, key) => (
-                                        <span key={key} className='px-2 py-1 text-x font-medium border rounded-full bg-secondary text-secondary-foreground'>{tag}</span>
+                                        <span key={key} className='px-2 py-1 text-x font-medium border border-primary rounded-lg bg-secondary text-secondary-foreground'>{tag}</span>
                                     ))}
                                 </div>
                             </div>
@@ -67,29 +67,29 @@ const ProjectsSection = () => {
                             <h3 className='text-xl font-semibold mb-1'>{project.title}</h3>
                             <p className='text-muted-foreground text-sm mb-4'>{project.description}</p>
                             <div className='flex justify-between items-center'>
-                                <div className='flex space-x-3'>
-                                    <a
-                                        href={project.demoUrl}
-                                        target='_blank'
-                                        className='text-foreground/80 hover: text-primary transition-colors duration-300'>
-                                        <ExternalLinkIcon size={20} />
-                                    </a>
                                     <a
                                         href={project.githubUrl}
                                         target='_blank'
-                                        className='text-foreground/80 hover: text-primary transition-colors duration-300'>
-                                        <GitBranchIcon size={20} />
+                                        className='flex items-center gap-2 font-medium text-foreground/80 hover: text-primary transition-colors duration-300'>
+                                        <p>Github</p>
+                                        <Github size={20} />
                                     </a>
-                                </div>
+                                    <a
+                                        href={project.demoUrl}
+                                        target='_blank'
+                                        className='flex items-center gap-2 font-medium text-foreground/80 hover: text-primary transition-colors duration-300'>
+                                        <p>View Page</p>
+                                        <ExternalLinkIcon size={20} />
+                                    </a>
                             </div>
                         </div>
                     ))}
                 </div>
 
                 <div className='text-center mt-12'>
-                    <a 
-                        href='https://github.com/emm-ok' 
-                        target='_blank' 
+                    <a
+                        href='https://github.com/emm-ok'
+                        target='_blank'
                         className='cosmic-button w-fit flex items-center mx-auto gap-2'
                     >
                         Check My Github <ArrowRight size={16} />

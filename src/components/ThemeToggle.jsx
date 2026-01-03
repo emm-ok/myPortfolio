@@ -15,7 +15,7 @@ const ThemeToggle = () => {
     } else {
       document.documentElement.classList.remove('dark');
     }
-  }, [isDarkMode]);
+  }, []);
   const toggleTheme = () => {
     if (isDarkMode) {
       document.documentElement.classList.remove('dark');
@@ -28,13 +28,13 @@ const ThemeToggle = () => {
     }
   }
   return (
-    <button onClick={toggleTheme} className={cn("cursor-pointer fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300", 
+    <button onClick={toggleTheme} className={cn("cursor-pointer z-50 p-2 bg-black/20 dark:bg-white/20 rounded-full transition-colors duration-300", 
       "focus:outline-hidden"
     )}>
       {isDarkMode ? (
-        <Sun className='h-6 w-6 text-yellow-300' />
+        <Sun className='md:h-6 md:w-6 h-4 w-4  text-yellow-300' />
       ) : (
-        <Moon className='h-6 w-6 text-blue-900' />
+        <Moon className='md:h-6 md:w-6 h-4 w-4  text-white' />
       )}
     </button>
   )

@@ -4,16 +4,23 @@ import { cn } from '../lib/utils'
 import { toast } from 'sonner'
 
 const ContactSection = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
     const [isSubmitting, setIsSubmitting] = useState(false);
     
     const handleSubmit = (e) => {
         e.preventDefault();
         setIsSubmitting(true);
         setTimeout(() => {
-            toast.success('Form submitted successfully');
-        }, 1500)
+            toast.success('message sent successfully');
+        }, 1000)
 
         setIsSubmitting(false);
+        setName('');
+        setEmail('');
+        setMessage('');
     }
 
 
@@ -24,7 +31,7 @@ const ContactSection = () => {
                     Get In <span className='text-primary'> Touch</span>
                 </h2>
 
-                <p className='text-center text-muted-foreground mb-12 max-w-2xl mx-auto'>
+                <p className='text-center font-medium text-muted-foreground mb-12 max-w-2xl mx-auto'>
                     Have a project in mind or want to collaborate? Feel free to reach out,
                     I'm always open to discussing new opportunities.
                 </p>
@@ -40,8 +47,8 @@ const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h4 className='font-medium text-left'>Email</h4>
-                                    <a href="mailto:example@gmail.com" className='text-muted-foreground hover:text-primary transition-colors'>
-                                        example@gmail.com
+                                    <a href="mailto:okoosiemmanuel@gmail.com" target='_blank' className='text-muted-foreground hover:text-primary transition-colors'>
+                                        okoosiemmanuel@gmail.com
                                     </a>
                                 </div>
                             </div>
@@ -51,8 +58,8 @@ const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h4 className='font-medium text-left'>Phone</h4>
-                                    <a href="tel:+(234) 424-242-42" className='text-muted-foreground hover:text-primary transition-colors'>
-                                        +(234) 424-242-42
+                                    <a href="tel:+(234) 805-858-4698" target='_blank' className='text-muted-foreground hover:text-primary transition-colors'>
+                                        +(234) 805-858-4698
                                     </a>
                                 </div>
                             </div>
@@ -62,9 +69,7 @@ const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h4 className='font-medium text-left'>Location</h4>
-                                    <a  className='text-muted-foreground hover:text-primary transition-colors'>
-                                        Nigeria
-                                    </a>
+                                    <a  className='text-muted-foreground hover:text-primary transition-colors'>Nigeria</a>
                                 </div>
                             </div>
                         </div>
@@ -72,16 +77,16 @@ const ContactSection = () => {
                         <div className='pt-8'>
                             <h4 className='font-medium mb-4'>Connect with Me</h4>
                             <div className='flex space-x-4 justify-center'>
-                                <a href="#" target='_blank'>
+                                <a href="https://www.instagram.com/_jayboy_k/" target='_blank'>
                                     <Linkedin />
                                 </a>
-                                <a href="#" target='_blank'>
+                                <a href="https://x.com/EOkoosi77762" target='_blank'>
                                     <Twitter />
                                 </a>
-                                <a href="#" target='_blank'>
+                                <a href="https://www.instagram.com/_jayboy_k/" target='_blank'>
                                     <Instagram />
                                 </a>
-                                <a href="#" target='_blank'>
+                                <a href="https://web.facebook.com/emmanuel.okoosi.5/photos" target='_blank'>
                                     <Facebook />
                                 </a>
                             </div>
@@ -97,7 +102,9 @@ const ContactSection = () => {
                                 <input 
                                     type="text" 
                                     id='name'
-                                    name='name' 
+                                    name='name'
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)} 
                                     required 
                                     className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outlline-hidden focus:ring-2 focus:ring-primary' 
                                     placeholder='Name Example...'
@@ -109,6 +116,8 @@ const ContactSection = () => {
                                     type="email" 
                                     id='email'
                                     name='email' 
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     required 
                                     className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outlline-hidden focus:ring-2 focus:ring-primary' 
                                     placeholder='example@gmail.com'
@@ -118,7 +127,9 @@ const ContactSection = () => {
                                 <label htmlFor="message" className='text-left block text-sm font-medium mb-2'>Your Message</label>
                                 <textarea 
                                     id='message'
-                                    name='message' 
+                                    name='message'
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)} 
                                     required 
                                     className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outlline-hidden focus:ring-2 focus:ring-primary resize-none' 
                                     placeholder='Message Example...'

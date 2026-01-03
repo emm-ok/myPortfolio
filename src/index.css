@@ -208,21 +208,21 @@ body {
   50% { transform: translateY(10px); }
 }
 
-@keyframes pulse-subtle {
+/* @keyframes pulse-subtle {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.8; }
-}
+} */
 
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes meteor {
+/* @keyframes meteor {
   0% { transform: rotate(215deg) translateX(0); opacity: 1; }
   70% { opacity: 1; }
   100% { transform: rotate(215deg) translateX(-500px); opacity: 0; }
-}
+} */
 
 /* STAR CLASS */
 .star {
@@ -237,9 +237,9 @@ body {
 }
 
 /* PULSE SUBTLE ANIMATION */
-.animate-pulse-subtle {
+/* .animate-pulse-subtle {
   animation: pulse-subtle 4s ease-in-out infinite;
-}
+} */
 
 /* FLOAT ANIMATION */
 .animate-float {
@@ -263,9 +263,9 @@ body {
   animation: fade-in 0.7s ease-out 0.8s forwards;
 }
 
-.animate-meteor {
+/* .animate-meteor {
   animation: meteor 0.7s ease-out infinite;
-}
+} */
 
 /* METEOR CLASS */
 .meteor {
@@ -361,3 +361,53 @@ body {
   padding: 0;
   text-align: center;
 }
+
+
+.snowflake {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10%) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.animate-fall {
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+/* Stars pulse */
+@keyframes pulseSubtle {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+.animate-pulse-subtle { animation: pulseSubtle infinite; }
+
+/* Meteors */
+@keyframes meteor {
+    0% { transform: translateX(0) translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateX(500px) translateY(500px) rotate(45deg); opacity: 0; }
+}
+.animate-meteor { animation-name: meteor; animation-timing-function: linear; animation-iteration-count: infinite; }
+
+/* Snowflakes falling */
+@keyframes fall {
+    0% { transform: translateY(-10%) rotate(0deg); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+.animate-fall { animation-name: fall; animation-timing-function: linear; animation-iteration-count: infinite; }
