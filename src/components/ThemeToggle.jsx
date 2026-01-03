@@ -34,7 +34,7 @@ const ThemeToggle = () => {
       {isDarkMode ? (
         <Sun className='md:h-6 md:w-6 h-4 w-4  text-yellow-300' />
       ) : (
-        <Moon className='md:h-6 md:w-6 h-4 w-4  text-white' />
+        <Moon className='md:h-6 md:w-6 h-4 w-4  text-black' />
       )}
     </button>
   )

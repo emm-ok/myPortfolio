@@ -18,7 +18,7 @@ const AboutSection = () => {
               and performant web applications using modern technologies.
             </p>
 
-            <p className='text-muted-foreground'>I'm passioante about creating elegant solutions to complex
+            <p className='text-muted-foreground'>I'm passionate about creating elegant solutions to complex
               problems, and I'm currently learning new technologies and
               techniques to stay at the forefront of the ever-evolving web
               landscape
@@ -78,7 +78,7 @@ const AboutSection = () => {
                 <div className='text-left'>
                   <h4 className='font-semibold text-lg'>Project Management</h4>
                   <p className='text-muted-foreground'>
-                    Leaing projects from concepts to completion with agile methodologies.
+                    Learing projects from concepts to completion with agile methodologies.
                   </p>
                 </div>
 

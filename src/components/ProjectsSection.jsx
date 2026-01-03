@@ -57,18 +57,18 @@ const ProjectsSection = () => {
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                     {projects.map((project, key) => (
                         <div key={key} className='group flex flex-col justify-between p-4 shadow-md border border-gray-300/10 rounded-lg overflow-hidden card-hover'>
-                            <div className='h-48 overflow-hidden border border-gray-500/50 rounded-md'>
+                            <a href={project.demoUrl} target='_blank' className='h-48 overflow-hidden border border-gray-500/50 rounded-md'>
                                 <img
                                     src={project.image}
                                     alt="project# image"
                                     className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'
                                 />
-                            </div>
+                            </a>
 
                             <div className='p-6'>
                                 <div className='flex flex-wrap gap-2'>
                                     {project.tags.map((tag, key) => (
-                                        <span key={key} className='px-2 py-1 text-x font-medium border border-primary rounded-lg bg-secondary text-secondary-foreground'>{tag}</span>
+                                        <span key={key} className='px-2 py-1 text-x font-medium border-b-2 rounded-lg bg-secondary text-secondary-foreground'>{tag}</span>
                                     ))}
                                 </div>
                             </div>
