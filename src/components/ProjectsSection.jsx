@@ -12,6 +12,15 @@ const projects = [
         githubUrl: 'https://github.com/emm-ok/CasualsHub_Landing_Page'
     },
     {
+        id: 5,
+        title: 'CSHub',
+        description: 'CSHub is a modern e-commerce platform designed to provide customers with a seamless shopping experience for casual apparel, accessories, and lifestyle products. The website combines intuitive design, responsive functionality, and a visually appealing interface to ensure effortless navigation and a smooth purchasing journey across devices.',
+        image: '/projects/project5.png',
+        tags: ['NextJs', 'Typescript,', 'Sanity CMS', 'Tailwind'],
+        demoUrl: 'https://cs-hub-sanity-next-js-store-ulj4.vercel.app/',
+        githubUrl: 'https://github.com/emm-ok/CSHub-Sanity-NextJS-Store'
+    },
+    {
         id: 2,
         title: 'Verto',
         description: 'LaunchBoard is a modern web application designed to serve as a central hub for startups to showcase their products, services, and innovative ideas. The platform empowers entrepreneurs to create profiles, share updates, and connect with potential investors, collaborators, and customers, fostering a dynamic ecosystem for early-stage ventures.',
