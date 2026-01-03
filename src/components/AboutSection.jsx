@@ -13,7 +13,7 @@ const AboutSection = () => {
           <div className='space-y-6'>
             <h3 className='text-2xl font-semibold'>Passionate Web Developer & Tech Creator</h3>
 
-            <p className='text-muted-foreground'>With over 3 uears of experince in web development,
+            <p className='text-muted-foreground'>With over 2 years of experience in web development,
               I specialize in creating responsive, accesible,
               and performant web applications using modern technologies.
             </p>

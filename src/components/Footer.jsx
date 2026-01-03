@@ -3,8 +3,8 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='py-12 px-4 bg-card relative border-t border-border mt-12 pt-8 flex flex-wrap justify-between items-center'>
-        <p className='textsm text-muted-foreground'>
+    <footer className='mx-8 py-12 px-4 bg-card relative shadow-md flex justify-center items-center rounded-full mt-12 pt-8 flex flex-wrap justify-between items-center'>
+        <p className='textsm text-muted-foreground font-medium'>
             &copy;   {new Date().getFullYear()} EmmyDev, All rights reserved 
         </p>
 
