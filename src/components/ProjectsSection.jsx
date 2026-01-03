@@ -29,6 +29,15 @@ const projects = [
         demoUrl: 'https://clothing-store-web-smoky.vercel.app/',
         githubUrl: 'https://github.com/emm-ok/ClothingStoreWeb'
     },
+    {
+        id: 4,
+        title: 'Nike',
+        description: 'This project is a high-fidelity clone of the Nike landing page, designed to replicate the look, feel, and interactivity of the iconic Nike website. Built as a responsive web application, it demonstrates expertise in modern frontend development, UI/UX design, and e-commerce presentation without the backend e-commerce functionality. The project showcases attention to detail, smooth animations, and a professional layout, making it an excellent example of modern web design skills.',
+        image: '/projects/project4.png',
+        tags: ['React', "Tailwind"],
+        demoUrl: 'https://nike-app-five.vercel.app/',
+        githubUrl: 'https://github.com/emm-ok/NikeApp'
+    },
 
 ]
 
@@ -47,7 +56,7 @@ const ProjectsSection = () => {
 
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                     {projects.map((project, key) => (
-                        <div key={key} className='group  p-4 shadow-md border border-gray-300/10 rounded-lg overflow-hidden card-hover'>
+                        <div key={key} className='group flex flex-col justify-between p-4 shadow-md border border-gray-300/10 rounded-lg overflow-hidden card-hover'>
                             <div className='h-48 overflow-hidden border border-gray-500/50 rounded-md'>
                                 <img
                                     src={project.image}

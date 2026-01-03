@@ -93,7 +93,7 @@ const ContactSection = () => {
                         </div>
                     </div>
 
-                    <div className='bg-card p-8 rounded-lg shadow-xs'>
+                    <div className='bg-card p-8 rounded-lg shadow-sm'>
                         <h3 className='text-2xl font-semibold mb-6'>Send a Message</h3>
 
                         <form onSubmit={handleSubmit} className='space-y-6' action="">
@@ -106,7 +106,7 @@ const ContactSection = () => {
                                     value={name}
                                     onChange={(e) => setName(e.target.value)} 
                                     required 
-                                    className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outlline-hidden focus:ring-2 focus:ring-primary' 
+                                    className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary' 
                                     placeholder='Name Example...'
                                     />
                             </div>
@@ -119,7 +119,7 @@ const ContactSection = () => {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     required 
-                                    className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outlline-hidden focus:ring-2 focus:ring-primary' 
+                                    className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary' 
                                     placeholder='example@gmail.com'
                                     />
                             </div>
@@ -131,7 +131,7 @@ const ContactSection = () => {
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)} 
                                     required 
-                                    className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outlline-hidden focus:ring-2 focus:ring-primary resize-none' 
+                                    className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none' 
                                     placeholder='Message Example...'
                                     />
                             </div>
