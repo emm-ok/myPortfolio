@@ -28,13 +28,13 @@ const ThemeToggle = () => {
     }
   }
   return (
-    <button onClick={toggleTheme} className={cn("cursor-pointer z-50 p-2 bg-black/20 dark:bg-white/20 rounded-full transition-colors duration-300", 
+    <button onClick={toggleTheme} className={cn("cursor-pointer z-50 p-2 bg-black/85 dark:bg-white/20 rounded-full transition-colors duration-300", 
       "focus:outline-hidden"
     )}>
       {isDarkMode ? (
         <Sun className='md:h-6 md:w-6 h-4 w-4  text-yellow-300' />
       ) : (
-        <Moon className='md:h-6 md:w-6 h-4 w-4  text-black' />
+        <Moon className='md:h-6 md:w-6 h-4 w-4  text-white' />
       )}
     </button>
   )
